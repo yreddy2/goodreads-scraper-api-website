@@ -1,0 +1,5 @@
+{% for author in all_authors%}
+    <div>
+        <a href="{% url 'author' author.0 %}">{{author.1}}</a>
+    </div>
+{% endfor %}

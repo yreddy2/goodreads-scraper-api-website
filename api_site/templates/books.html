@@ -1,0 +1,5 @@
+{% for book in all_books%}
+    <div>
+        <a href="{% url 'book' book.0 %}">{{book.2}}</a>
+    </div>
+{% endfor %}

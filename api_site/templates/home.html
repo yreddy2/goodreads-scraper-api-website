@@ -1,0 +1,32 @@
+<form action="/books/" method="post">{% csrf_token %}
+    <select name="attribute">
+        <option>title</option>
+        <option>author</option>
+        <option>similar_books</option>
+    </select>
+    <input type="text" name="value" />
+    <input type="submit" value="Search Books"/>
+</form>
+<form action="/authors/" method="post">{% csrf_token %}
+    <select name="attribute", >
+        <option>name</option>
+        <option>author_books</option>
+    </select>
+    <input type="text" name="value" />
+    <input type="submit" value="Search Authors"/>
+</form>
+<form action="/add/book/form" method="post">{% csrf_token %}
+    <input type="submit" value="Add Book"/>
+</form>
+<form action="/add/author/form" method="post">{% csrf_token %}
+    <input type="submit" value="Add Author"/>
+</form>
+<form action="/query/most-book-authors/" method="post">{% csrf_token %}
+    <input type="submit" value="Most Book Authors"/>
+</form>
+<form action="/vis/rank-authors/" method="post">{% csrf_token %}
+    <input type="submit" value="Rank Authors"/>
+</form>
+<form action="/vis/rank-books/" method="post">{% csrf_token %}
+    <input type="submit" value="Rank Books"/>
+</form>

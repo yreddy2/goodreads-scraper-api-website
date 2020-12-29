@@ -1,0 +1,23 @@
+{% for attribute in book_info%}
+    <body>{{attribute.0}}</body>
+    <body>{{attribute.1}}</body>
+    <h1> </h1>
+{% endfor %}
+<form action="/update/book/" method="post">{% csrf_token %}
+    <select name="attribute">
+        <option>book_url</option>
+        <option>title</option>
+        <option>author</option>
+        <option>author_url</option>
+        <option>rating</option>
+        <option>rating_count</option>
+        <option>review_count</option>
+        <option>image_url</option>
+    </select>
+    <input type="text" name="value" />
+    <input type="hidden" name="ident" value={{book_info.0.1}} />
+    <input type="submit" value="Update Book"/>
+</form>
+<div>
+    <a href="{% url 'delete_book' book_info.0.1 %}">Delete Book</a>
+</div>

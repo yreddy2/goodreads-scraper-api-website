@@ -1,0 +1,12 @@
+<form action="/home/" method="post">{% csrf_token %}
+    <input type="text" name="ident" value="_id" />
+    <input type="text" name="name" value="name" />
+    <input type="text" name="author_url" value="author_url" />
+    <input type="text" name="rating" value="rating" />
+    <input type="text" name="rating_count" value="rating_count" />
+    <input type="text" name="review_count" value="review_count" />
+    <input type="text" name="image_url" value="image_url" />
+    <input type="text" name="related_authors" value="related_authors" />
+    <input type="text" name="author_books" value="author_books" />
+    <input type="submit" value="Add Author"/>
+</form>
